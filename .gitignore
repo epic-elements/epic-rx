@@ -85,4 +85,4 @@ bower_components
 jspm_packages
 
 ### deployment ###
-dist
+build
