@@ -15,6 +15,14 @@ const gulp = require('gulp');
 // const gulpif = require('gulp-if');
 // const babel = require('gulp-babel');
 const gulp_jspm = require('gulp-jspm');
+const inlinesource = require('gulp-inline-source');
+
+gulp.task('inlinesource', function () {
+    return gulp.src('./src/epic-rx.html')
+        .pipe(inlinesource())
+        .pipe(gulp.dest('./build'))
+        .pipe(gulp.dest('./dist'));
+});
 
 // Add your own custom gulp tasks to the gulp-tasks directory
 // A few sample tasks are provided for you
